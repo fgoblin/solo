@@ -36,6 +36,14 @@ module.exports = {
       gasPrice: 1,
       network_id: '1001',
     },
+    matic: {                             
+   provider: function() {
+     return new HDWalletProvider("mnemonic",'https://testnet2.matic.network', 0,1)                             },                             
+   network_id: 8995,
+   gas: 8000000,                             
+   gasPrice: 0,     
+},
+    
     mainnet: {
       network_id: '1',
       provider: () => new HDWalletProvider(
