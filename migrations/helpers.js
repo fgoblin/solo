@@ -10,7 +10,8 @@ function isDevNetwork(network) {
       || network.startsWith('develop')
       || network.startsWith('dev')
       || network.startsWith('docker')
-      || network.startsWith('coverage');
+      || network.startsWith('coverage')
+      || network.startswith(‘matic’);
 }
 
 function isMainNet(network) {
