@@ -18,6 +18,10 @@ function isMainNet(network) {
   verifyNetwork(network);
   return network.startsWith('mainnet');
 }
+function isMatic(network) {
+  verifyNetwork(network);
+  return network.startsWith('matic');
+}
 
 function isKovan(network) {
   verifyNetwork(network);
@@ -33,6 +37,9 @@ function getChainId(network) {
   if (isMainNet(network)) {
     return 1;
   }
+  if (network.startsWith(‘matic’)) { 
+ return 8995;
+}
   if (isKovan(network)) {
     return 42;
   }
